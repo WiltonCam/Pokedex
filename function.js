@@ -1,5 +1,6 @@
-const pokemonCount = 300;
-var pokedex = {}; 
+const pokemonCount = 151;
+var pokedex = {};
+
 window.onload = async function() {
     for (let i = 1; i <= pokemonCount; i++) {
         await getPokemon(i);
@@ -29,7 +30,6 @@ async function getPokemon(num) {
     res = await fetch(pokemon["species"]["url"]);
     let pokemonDesc = await res.json();
 
-    
     pokemonDesc = pokemonDesc["flavor_text_entries"][9]["flavor_text"];
 
     pokedex[num] = {"name" : pokemonName, "img" : pokemonImg, "types" : pokemonType, "desc" : pokemonDesc};
