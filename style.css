@@ -177,3 +177,9 @@ body {
     font-size: 18px;
     overflow-y: auto;
 }
+
+@media (max-width: 240px){
+    body{
+        background-color: black;
+    }
+}
